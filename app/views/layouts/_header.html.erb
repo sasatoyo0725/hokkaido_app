@@ -9,14 +9,22 @@
   <div class="collapse navbar-collapse justify-content-end" id="responsiveMenu">
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <li class="nav-item">
+        <strong><%= current_user.name %></strong>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'ユーザー', edit_user_registration_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </li>
       <% else %>
-       <li class="nav-item">
-         <a class="nav-link" href="#">新規登録</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" href="#">ログイン</a>
-       </li>
+      <li class="nav-item">
+        <%= link_to "新規登録", new_user_registration_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "ログイン", new_user_session_path %>
+      </li>
       <% end %>
 
     </ul>

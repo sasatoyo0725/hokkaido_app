@@ -2,6 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
+        name: "名前"
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
@@ -9,6 +10,20 @@ ja:
         remember_me: "ログインを記憶"
     models:
       user: "ユーザ"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "を入力してください。"
+              taken: "は既に使用されています。"
+            password:
+              blank: "を入力してください。"
+              too_short: "の文字数が短すぎます。"
+            password_confirmation:
+              confirmation: "はパスワードと一致しません。"
+            current_password:
+              blank: "を入力してください。"
   devise:
     confirmations:
       new:
@@ -17,7 +32,7 @@ ja:
       confirmation_instructions:
         action: "アカウント確認"
         greeting: "ようこそ、%{recipient}さん!"
-        instruction: "次のリンクでメールアドレスの確認が完了します:"
+        instruction: "次のリンクでメールアドレスの確認が完了します。"
       reset_password_instructions:
         action: "パスワード変更"
         greeting: "こんにちは、%{recipient}さん!"
