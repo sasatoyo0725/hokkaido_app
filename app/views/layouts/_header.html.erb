@@ -13,7 +13,7 @@
         <strong><%= current_user.name %></strong>
       </li>
       <li class="nav-item">
-        <%= link_to 'ユーザー', edit_user_registration_path %>
+        <%= link_to 'ユーザー', user_path(current_user.id) %>
       </li>
       <li class="nav-item">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
