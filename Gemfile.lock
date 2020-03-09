@@ -58,8 +58,11 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    archive-zip (0.7.0)
+      io-like (~> 0.3.0)
     autoprefixer-rails (9.7.4)
       execjs
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
@@ -78,15 +81,33 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    chromedriver-helper (1.1.0)
+      archive-zip (~> 0.7.0)
+      nokogiri (~> 1.6)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    devise (4.7.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    devise-i18n (1.9.0)
+      devise (>= 4.7.1)
+    devise-i18n-views (0.3.7)
     erubi (1.9.0)
     execjs (2.7.0)
+    factory_bot (5.1.1)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.1)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     jquery-rails (4.3.5)
@@ -114,6 +135,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     pg (0.20.0)
     popper_js (1.16.0)
     public_suffix (4.0.3)
@@ -159,6 +181,29 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+<<<<<<< HEAD
+    rspec-core (3.9.1)
+      rspec-support (~> 3.9.1)
+    rspec-expectations (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (3.9.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.2)
+=======
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
+>>>>>>> sign-up2
     ruby_dep (1.5.0)
     rubyzip (2.2.0)
     sass-rails (6.0.0)
@@ -175,6 +220,8 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    shoulda-matchers (4.3.0)
+      activesupport (>= 4.2.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -196,6 +243,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (4.0.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -220,10 +269,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   bootsnap (>= 1.4.2)
   bootstrap
   byebug
   capybara (>= 2.15)
+<<<<<<< HEAD
+  chromedriver-helper (~> 1.1.0)
+  factory_bot_rails
+=======
+  devise
+  devise-i18n
+  devise-i18n-views
+>>>>>>> sign-up2
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -232,9 +290,11 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   rails-controller-testing
+  rspec-rails
   sass-rails (>= 6)
   sassc (~> 2.0.0)
   selenium-webdriver
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
