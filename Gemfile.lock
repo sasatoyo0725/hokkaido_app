@@ -95,6 +95,7 @@ GEM
     devise-i18n (1.9.0)
       devise (>= 4.7.1)
     devise-i18n-views (0.3.7)
+    diff-lcs (1.3)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
@@ -181,7 +182,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
-<<<<<<< HEAD
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-expectations (3.9.0)
@@ -199,11 +202,6 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
-=======
-    responders (3.0.0)
-      actionpack (>= 5.0)
-      railties (>= 5.0)
->>>>>>> sign-up2
     ruby_dep (1.5.0)
     rubyzip (2.2.0)
     sass-rails (6.0.0)
@@ -274,14 +272,11 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (>= 2.15)
-<<<<<<< HEAD
   chromedriver-helper (~> 1.1.0)
-  factory_bot_rails
-=======
   devise
   devise-i18n
   devise-i18n-views
->>>>>>> sign-up2
+  factory_bot_rails
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
