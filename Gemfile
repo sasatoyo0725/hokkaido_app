@@ -35,6 +35,7 @@ gem 'bootstrap'
 gem 'mysql2', '>= 0.4.4'
 gem 'bcrypt'
 gem 'chromedriver-helper', '~> 1.1.0'
+gem "aws-sdk-s3", require: false
 
 
 group :development, :test do

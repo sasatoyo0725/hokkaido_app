@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controlelrs: {
+          registrations: 'users/registrations'
+  }
 
   root 'staticpages#home'
   get  '/help', to: 'staticpages#help'
