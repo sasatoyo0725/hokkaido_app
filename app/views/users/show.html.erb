@@ -2,7 +2,7 @@
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>
 <% if @user.image.attached? %>
-  <%= image_tag @user.image.variant(resize: '100x100') %>
+  <%= image_tag @user.image.variant(resize: '300x300') %>
 <% end %>
 
 <%= link_to "編集", edit_user_registration_path %>
