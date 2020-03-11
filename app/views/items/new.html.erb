@@ -1,0 +1,17 @@
+<h1>新規投稿</h1>
+
+<%= form_with model: @item do |f| %>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

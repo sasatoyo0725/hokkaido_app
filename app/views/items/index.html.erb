@@ -1,0 +1,14 @@
+<h1>投稿一覧</h1>
+<%= link_to '新規投稿', new_item_path %>
+
+<ul>
+  <% @items.each do |item| %>
+    <li>
+      <p><%= item.description %></p>
+      <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% item.images.each do |image| %>
+        <%= image_tag(image, width:100) %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
