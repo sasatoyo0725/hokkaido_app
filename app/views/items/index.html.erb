@@ -1,3 +1,4 @@
+<% provide(:title, "投稿一覧") %>
 <h1>投稿一覧</h1>
 <%= link_to '新規投稿', new_item_path %>
 
@@ -5,10 +6,14 @@
   <% @items.each do |item| %>
     <li>
       <p><%= item.description %></p>
-      <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% item.images.each do |image| %>
         <%= image_tag(image, width:100) %>
       <% end %>
+
+      <%= link_to '削除', item, method: :delete, data: { confirm: '削除しますか？' } %>
+      <%= link_to '編集', item %>
+  
+
     </li>
   <% end %>
 </ul>
