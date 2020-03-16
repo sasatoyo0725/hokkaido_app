@@ -4,6 +4,7 @@ class Item < ApplicationRecord
 
   has_many_attached :images
 
-  belongs_to :user
+  belongs_to :user, optional: true
+  has_many :comments, foreign_key: "item_id", dependent: :destroy
 
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -13,4 +13,5 @@ Rails.application.routes.draw do
  end
 
   resources :items
+  resources :comments, only: [:new, :create]
 end
