@@ -5,11 +5,6 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  def show
-    @item = Item.find_by(id: params[:id])
-    @user = User.find_by(id: @item.user_id)
-  end
-
   def new
     @item = Item.new
   end
@@ -17,7 +12,7 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.new(item_params)
     if @item.save
-      redirect_to items_path, notice: "投稿に成功しました"
+      redirect_to user_items_path, notice: "投稿に成功しました"
     else
       flash.now[:alert] = "投稿に失敗しました"
       render :new
