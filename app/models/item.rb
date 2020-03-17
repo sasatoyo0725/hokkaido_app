@@ -5,6 +5,8 @@ class Item < ApplicationRecord
   has_many_attached :images
 
   belongs_to :user, optional: true
-  has_many :comments, foreign_key: "item_id", dependent: :destroy
+  has_many :comments, foreign_key: :item_id, dependent: :destroy
+  has_many :likes, foreign_key: :item_id, dependent: :destroy
+  has_many :like_users, through: :likes, source: :user
 
 end

@@ -1,0 +1,19 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @like_items.each do |item| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+              <%= item.user.name %>
+            </h2>
+            <%= image_tag item.image.url %>
+            <p class="topic-text">
+              <%= item.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

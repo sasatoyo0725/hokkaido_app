@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item.all.includes(:like_users)
   end
 
   def new

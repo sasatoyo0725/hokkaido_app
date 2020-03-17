@@ -13,6 +13,16 @@
     <p class="comment-text"><%= comment.content %></p>
     <% end %>
 
+    <% if !item.like_users.include?(current_user) %>
+     <%= link_to likes_path(item_id: item.id), method: :post do %>
+      <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
+     <% end %>
+     <% else %>
+     <%= link_to likes_path(item_id: item.id), method: :delete do %>
+      <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon heart-red' %>
+      <% end %>
+      <%= item.like_users.count %>
+    <% end %>
     <%= link_to 'コメントする', new_comment_path(item_id: item.id) %>
     <%= link_to '削除', item, method: :delete, data: { confirm: '削除しますか？' } %>
     <%= link_to '編集', edit_item_path(current_user) %>
