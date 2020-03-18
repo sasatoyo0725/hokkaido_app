@@ -7,7 +7,9 @@
             <h2 class="topic-author">
               <%= item.user.name %>
             </h2>
-            <%= image_tag item.image.url %>
+            <% item.images.each do |image| %>
+             <%= image_tag(image, width:100) %>
+            <% end %>
             <p class="topic-text">
               <%= item.description %>
             </p>
