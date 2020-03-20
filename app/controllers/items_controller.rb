@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
+  PER = 3
 
   def index
-    @items = Item.all.includes(:like_users)
+    @items = Item.all.includes(:like_users).page(params[:page]).per(PER)
   end
 
   def new

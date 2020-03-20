@@ -1,7 +1,8 @@
 class LikesController < ApplicationController
+  PER = 3
 
   def index
-    @like_items = current_user.like_items
+    @like_items = current_user.like_items.page(params[:page]).per(PER)
   end
 
   def create

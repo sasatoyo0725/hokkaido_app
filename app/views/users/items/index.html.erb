@@ -32,7 +32,7 @@
               <% end %>
               <%= link_to 'コメントする', new_comment_path(item_id: item.id) %>
               <%= link_to '削除', item, method: :delete, data: { confirm: '削除しますか？' } %>
-              
+
 
             </li>
           </div>
@@ -41,4 +41,5 @@
       <% end %>
     </ul>
   </div>
+  <%= paginate @items %>
 </div>
