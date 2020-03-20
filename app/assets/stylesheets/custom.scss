@@ -1,5 +1,11 @@
 h1, h2 {
   font-weight: 100;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .text-white {
@@ -59,7 +65,50 @@ h1, h2 {
   }
 }
 
+.topic-index-wrapper {
+  padding: 20px,0;
+  background-color: #fafafa;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 30px 0;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .comment-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+
+    .heart-red {
+      filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
+    }
+  }
+}
+
 footer{
   text-align: center;
-  margin: 10px,0;
+  margin: 20px,0,0,0;
 }

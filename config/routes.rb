@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get  '/about', to: 'staticpages#about'
 
   resources :users do
-   resources :items, module: 'users', only: :index
+   resources :items, module: 'users', only: [:index]
  end
 
   resources :items
