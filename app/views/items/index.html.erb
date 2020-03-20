@@ -1,6 +1,8 @@
 <% provide(:title, "投稿一覧") %>
 <h1>投稿一覧</h1>
-<%= link_to '新規投稿', new_item_path %>
+<div class="new-post">
+<%= link_to '新規投稿', new_item_path, class: 'btn btn-block btn-new' %>
+</div>
 <div class="topic-index-wrapper">
   <div class="container">
     <ul>
@@ -16,7 +18,7 @@
               <% item.images.each do |image| %>
               <%= image_tag(image, width:400) %>
               <% end %>
-              <p><%= item.description %></p>
+              <p class="description-text"><%= item.description %></p>
               <% item.comments.each do |comment| %>
               <p class="comment-text"><%= comment.content %></p>
               <% end %>

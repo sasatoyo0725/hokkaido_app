@@ -5,6 +5,7 @@ ja:
         name: "名前"
         current_password: "現在のパスワード"
         email: "メールアドレス"
+        image: "プロフィール画像"
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"

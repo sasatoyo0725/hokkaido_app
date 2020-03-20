@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, h3, h4 {
   font-weight: 100;
   text-align: center;
 }
@@ -12,6 +12,19 @@ ul {
   color: #fff;
 }
 
+.text-blue {
+  color: #00008B;
+  font-weight: bold;
+}
+
+.description-text {
+  padding: 0 20px;
+}
+
+.form-control {
+  height: 45px;
+}
+
 .btn-white {
   color: #fff;
   border: 1px solid #fff;
@@ -21,7 +34,21 @@ ul {
   background-color: rgba(0,0,0,0.0);
 
   &:hover {
-    color: #fff;
+    color: blue;
+  }
+}
+
+
+.btn-new {
+  color: #4682B4;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgb(154,205,50);
+
+  &:hover {
+    color: blue;
   }
 }
 
@@ -36,6 +63,12 @@ ul {
   background-color: #464646;
 }
 
+.user-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #B0E0E6;
+}
+
 .top-hero-container {
   padding-top: 220px;
   h1 {
@@ -47,6 +80,21 @@ ul {
     margin-bottom: 60px;
   }
 }
+
+.users-new-wrapper {
+  padding: 20px,0;
+  background-color: #fff;
+
+  .field {
+    margin-bottom: 20px
+  }
+
+  .userdelete {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
 .navbar-transparent {
   margin-bottom: 0px;
   background-color: rgba(0,0,0,0.8);
@@ -60,9 +108,21 @@ ul {
     border-radius: 10px;
   }
 
+  .nav-item {
+    margin-right: 20px;
+  }
+
   img {
     height: 40px;
   }
+}
+
+.new-post {
+  text-align: center;
+}
+
+.topic-new-wrapper {
+  padding-top: 30px;
 }
 
 .topic-index-wrapper {
@@ -99,14 +159,17 @@ ul {
     .topic-index-icon {
       width: 35px;
       height: 30px;
-      margin-left: 20px;
+
     }
+
 
     .heart-red {
       filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
     }
   }
+
 }
+
 
 footer{
   text-align: center;

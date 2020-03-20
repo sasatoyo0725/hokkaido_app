@@ -3,4 +3,5 @@ class Users::ItemsController < ApplicationController
     @user = User.find(params[:user_id])
     @items = @user.items.all
   end
+  
 end
