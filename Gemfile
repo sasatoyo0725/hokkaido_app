@@ -27,6 +27,10 @@ gem 'devise-i18n-views'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'ransack'
+gem 'config'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
