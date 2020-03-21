@@ -24,15 +24,15 @@ class User < ApplicationRecord
     where(uid: auth.uid).first
   end
 
-  def self.new_with_session(_, session)
-    super.tap do |user|
-      if (data = session['devise.omniauth_data'])
-        user.email = data['email'] if user.email.blank?
-        user.provider = data['provider'] if data['provider'] && user.provider.blank?
-        user.uid = data['uid'] if data['uid'] && user.uid.blank?
-        user.skip_confirmation!
+    def self.new_with_session(_, session)
+      super.tap do |user|
+        if (data = session['devise.omniauth_data'])
+          user.email = data['email'] if user.email.blank?
+          user.provider = data['provider'] if data['provider'] && user.provider.blank?
+          user.uid = data['uid'] if data['uid'] && user.uid.blank?
+          user.skip_confirmation!
+        end
       end
     end
-  end
 
-end
+  end
