@@ -38,20 +38,6 @@ ul {
   }
 }
 
-
-.btn-new {
-  color: #4682B4;
-  border: 1px solid #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgb(154,205,50);
-
-  &:hover {
-    color: blue;
-  }
-}
-
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
@@ -117,8 +103,13 @@ ul {
   }
 }
 
+.search {
+  text-align: center;
+}
+
 .new-post {
   text-align: center;
+  margin-top: 10px;
 }
 
 .topic-new-wrapper {

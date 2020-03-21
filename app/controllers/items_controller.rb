@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
   PER = 3
 
   def index
-    @items = Item.all.includes(:like_users).page(params[:page]).per(PER)
+    @q = Item.search(params[:q])
+    @items = @q.result(distinct: true).includes(:like_users).page(params[:page]).per(PER)
   end
 
   def new

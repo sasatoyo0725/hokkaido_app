@@ -1,0 +1,4 @@
+<%= search_form_for @q do |f| %>
+    <%= f.search_field :description_cont, placeholder: "検索ワード" %>
+    <%= f.submit value: "検索" %>
+<% end %>
