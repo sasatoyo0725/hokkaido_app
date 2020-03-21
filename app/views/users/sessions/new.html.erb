@@ -25,10 +25,7 @@
       <%= f.submit "ログイン" %>
     </div>
     <% end %>
-    <div>
-     <%= link_to "Facebookでログイン", user_facebook_omniauth_authorize_path %>
-    </div>
 
-    <%= render "users/shared/links" %>
+    <%= render "devise/shared/links" %>
   </div>
 </div>
