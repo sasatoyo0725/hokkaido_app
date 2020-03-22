@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.new(item_params)
     if @item.save
-      redirect_to user_items_path, notice: "投稿に成功しました"
+      redirect_to user_items_path(user_id: current_user.id), notice: "投稿に成功しました"
     else
       flash.now[:alert] = "投稿に失敗しました"
       render :new
