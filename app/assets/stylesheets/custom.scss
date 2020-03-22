@@ -180,6 +180,44 @@ ul {
 
 }
 
+.users {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.stats {
+  font-weight: bold;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  a {
+    padding: 0 10px;
+    border-left: 1px solid;
+    color: orange;
+  }
+  &:hover {
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.following {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  margin-left: 30px;
+}
+
+.follow-btn {
+  margin-bottom: 20px;
+}
+
 .pagination {
   justify-content: center;
 }
