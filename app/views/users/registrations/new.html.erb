@@ -1,9 +1,7 @@
 <% provide(:title, "新規登録") %>
-<div class="users-new-wrapper" >
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-md-offset-3">
-        <h1 class="text-center text-blue">新規登録</h1>
+<div class="users-new-wrapper mx-auto" style="width: 200px;" >
+  <div class="users-new-container">
+    <h1 class="text-center text-blue">新規登録</h1>
 
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -42,8 +40,6 @@
         </div>
         <% end %>
 
-        <%= render "devise/shared/links" %>
+        <%= render "users/shared/links" %>
       </div>
     </div>
-  </div>
-</div>

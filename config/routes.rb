@@ -10,11 +10,15 @@ Rails.application.routes.draw do
   get  '/about', to: 'staticpages#about'
 
   resources :users do
-   resources :items, module: 'users', only: [:index]
- end
+    resources :items, module: 'users', only: [:index]
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :items
   resources :comments, only: [:new, :create]
+  resources :relationships, only: [:create, :destroy]
   get 'likes/index'
   post '/likes', to: 'likes#create'
   delete '/likes', to: 'likes#destroy'

@@ -7,6 +7,8 @@
     <% end %>
     <p class="users">Name : <%= @user.name %></p>
     <p class="users">Email : <%= @user.email %></p>
+    <%= render 'follow_form' %>
+    <%= render 'stats' %>
     <div class="row">
       <div class="col-md-3">
         <%= link_to "ユーザー編集", edit_user_registration_path, class: 'btn btn-block btn-white' %>

@@ -19,6 +19,9 @@
         <%= link_to 'MyPage', user_path(current_user.id) %>
       </li>
       <li class="nav-item">
+        <%= link_to '登録者', users_path(current_user.id) %>
+      </li>
+      <li class="nav-item">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
       <% else %>
