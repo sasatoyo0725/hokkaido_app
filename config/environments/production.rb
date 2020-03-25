@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.require_master_key = true
   config.assets.js_compressor = :uglifier
   # Settings specified here will take precedence over those in config/application.rb.
 
