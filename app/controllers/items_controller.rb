@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update_attributes(item_params)
-      redirect_to items_path(current_user), notice: "更新に成功しました"
+      redirect_to user_items_path(user_id: current_user.id), notice: "更新に成功しました"
     else
       flash.now[:alert] = "更新に失敗しました"
       render :edit
