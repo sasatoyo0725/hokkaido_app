@@ -53,6 +53,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'rails-env-credentials'
 end
 
 group :development do
