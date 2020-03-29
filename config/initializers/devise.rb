@@ -299,8 +299,8 @@ Devise.setup do |config|
   config.scoped_views = true
 
   config.omniauth :facebook,
-                  Settings.facebook[:facebook_api_key],
-                  Settings.facebook[:facebook_api_secret],
-                  scope: 'email',
-                  info_fields: 'email,name'
+                   Settings.facebook.facebook_api_key,
+                   Settings.facebook.facebook_api_secret,
+                   scope: 'email',
+                   info_fields: 'email,name'
 end
