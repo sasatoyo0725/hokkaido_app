@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :items
   resources :comments, only: [:new, :create]
   resources :relationships, only: [:create, :destroy]
+  resources :categories, only: [:show]
   get 'likes/index'
   post '/likes', to: 'likes#create'
   delete '/likes', to: 'likes#destroy'
