@@ -15,10 +15,14 @@
               <% item.images.each do |image| %>
               <%= image_tag(image, width:400) %>
               <% end %>
+              <% item.categories.each do |c| %>
+              <p class="category-text"><%= c.name %></p>
+              <% end %>
               <p class="description-text"><%= item.description %></p>
               <% item.comments.each do |comment| %>
               <p class="comment-text"><%= comment.content %></p>
               <% end %>
+
 
               <% if !item.like_users.include?(current_user) %>
               <%= link_to likes_path(item_id: item.id), method: :post do %>

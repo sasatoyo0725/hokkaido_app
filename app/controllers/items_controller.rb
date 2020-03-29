@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:description, images: [])
+    params.require(:item).permit(:description, images: [], category_ids: [])
   end
 
   def correct_user
