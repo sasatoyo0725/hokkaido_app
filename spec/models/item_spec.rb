@@ -6,7 +6,7 @@ RSpec.describe Item, type: :model do
 
   describe "バリデーション " do
     it 'user_idとdescriptionがあればOK' do
-      binding.pry
+      
     end
 
     it 'user_idが空ならNG' do
