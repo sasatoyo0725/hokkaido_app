@@ -1,0 +1,48 @@
+<% provide(:title, "ユーザー投稿一覧") %>
+<h1>あなたの投稿一覧</h1>
+<div class="topic-index-wrapper">
+  <div class="container">
+    <ul>
+      <% @items.each do |item| %>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+
+            <li>
+              <h2 class="topic-author">
+                <%= item.user.name %>
+              </h2>
+              <% item.images.each do |image| %>
+              <%= image_tag(image, width:400) %>
+              <% end %>
+              <% item.categories.each do |c| %>
+              <p class="category-text"><%= c.name %></p>
+              <% end %>
+              <p class="description-text"><%= item.description %></p>
+              <% item.comments.each do |comment| %>
+              <p class="comment-text"><%= comment.content %></p>
+              <% end %>
+
+
+              <% if !item.like_users.include?(current_user) %>
+              <%= link_to likes_path(item_id: item.id), method: :post do %>
+              <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
+              <% end %>
+              <% else %>
+              <%= link_to likes_path(item_id: item.id), method: :delete do %>
+              <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon heart-red' %>
+              <% end %>
+              <%= item.like_users.count %>
+              <% end %>
+              <%= link_to 'コメントする', new_comment_path(item_id: item.id) %>
+              <%= link_to '削除', item, method: :delete, data: { confirm: '削除しますか？' } %>
+              <%= link_to '編集', edit_item_path(item) %>
+            </li>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+  <%= paginate @items %>
+</div>

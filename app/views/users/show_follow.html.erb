@@ -1,0 +1,17 @@
+<% provide(:title, "フォロー") %>
+<h1>Follow</h1>
+<% @user.followings.each do |user| %>
+<ul class="list-group" >
+  <li class="list-group-item">
+
+    <% if @user.image.attached? %>
+    <%= image_tag @user.image.variant(resize: '200x200') %>
+    <% end %>
+
+    <div class="following">
+      <%= user.name %>
+      <%= link_to '詳細', user_path(user) %>
+    </div>
+  </li>
+</ul>
+<% end %>

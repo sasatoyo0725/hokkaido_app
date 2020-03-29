@@ -1,0 +1,18 @@
+
+
+<% provide(:title, "ユーザー一覧") %>
+<h1>全ユーザー</h1>
+<% @users.each do |user| %>
+<ul class="list-group users" >
+  <li class="list-group-item">
+
+    <% if user.image.attached? %>
+    <%= image_tag user.image.variant(resize: '200x200') %>
+    <% end %>
+
+    <div class="following">
+      <%= link_to user.name, user %>
+    </div>
+  </li>
+</ul>
+<% end %>

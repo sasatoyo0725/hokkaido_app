@@ -1,9 +1,37 @@
-h1, h2 {
+body {
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4 {
   font-weight: 100;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .text-white {
   color: #fff;
+  border-bottom: double 5px #FFC778;
+}
+
+.text-white2 {
+  color: #fff;
+}
+
+.text-blue {
+  color: #00008B;
+  font-weight: bold;
+}
+
+.description-text {
+  padding: 0 20px;
+}
+
+.form-control {
+  height: 45px;
 }
 
 .btn-white {
@@ -15,7 +43,7 @@ h1, h2 {
   background-color: rgba(0,0,0,0.0);
 
   &:hover {
-    color: #fff;
+    color: blue;
   }
 }
 
@@ -30,6 +58,55 @@ h1, h2 {
   background-color: #464646;
 }
 
+.card-top {
+  margin-top: 30px;
+}
+
+.card-header {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.card-deck {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.card-title1 {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+.card-title2 {
+  font-size: 30px;
+  color: plum;
+  font-weight: bold;
+}
+
+.card-title3 {
+  font-size: 30px;
+  color: royalblue;
+  font-weight: bold;
+}
+
+.card-title4 {
+  font-size: 30px;
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.card-text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-hero-wrapper {
+  width: 100vw;
+  height: 130vh;
+  background-color: #B0E0E6;
+}
+
 .top-hero-container {
   padding-top: 220px;
   h1 {
@@ -41,9 +118,25 @@ h1, h2 {
     margin-bottom: 60px;
   }
 }
+
+.users-new-wrapper {
+  padding: 20px,0;
+  background-color: #fff;
+
+  .field {
+    margin-bottom: 20px
+  }
+
+  .userdelete {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
 .navbar-transparent {
   margin-bottom: 0px;
   background-color: rgba(0,0,0,0.8);
+  z-index: 10;
   a {
     color: #333 !important;
   }
@@ -54,12 +147,123 @@ h1, h2 {
     border-radius: 10px;
   }
 
+  .nav-item {
+    margin-right: 20px;
+  }
+
   img {
     height: 40px;
   }
 }
 
+.search {
+  text-align: center;
+}
+
+.new-post {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.topic-new-wrapper {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.topic-index-wrapper {
+  padding: 20px,0;
+  background-color: #fafafa;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 30px 0;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .comment-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .category-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+
+    }
+
+
+    .heart-red {
+      filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
+    }
+  }
+
+}
+
+.users {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.stats {
+  font-weight: bold;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  a {
+    padding: 0 10px;
+    border-left: 1px solid;
+    color: orange;
+  }
+  &:hover {
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.following {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  margin-left: 30px;
+}
+
+.follow-btn {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+
 footer{
   text-align: center;
-  margin: 10px,0;
+  margin: 20px,0,0,0;
 }

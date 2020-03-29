@@ -1,1 +1,27 @@
-<%= @user.name %>, <%= @user.email %>
+<% provide(:title, "マイページ") %>
+<div class="user-hero-wrapper text-center">
+  <div class="container user-hero-container">
+    <h1 class="text-blue">MyPage</h1>
+    <% if @user.image.attached? %>
+    <%= image_tag @user.image.variant(resize: '300x300') %>
+    <% end %>
+    <p class="users">Name : <%= @user.name %></p>
+    <p class="users">Email : <%= @user.email %></p>
+    <%= render 'follow_form' %>
+    <%= render 'stats' %>
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to "ユーザー編集", edit_user_registration_path, class: 'btn btn-block btn-white' %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "新規投稿", new_item_path, class: 'btn btn-block btn-white' %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "投稿一覧", user_items_path(user_id: @user.id), class: 'btn btn-block btn-white' %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "お気に入り", likes_index_path, class: 'btn btn-block btn-white' %>
+      </div>
+    </div>
+  </div>
+</div>

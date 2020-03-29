@@ -1,0 +1,33 @@
+<% provide(:title, "新規投稿") %>
+<div class="topic-new-wrapper" >
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">新規投稿</h1>
+        <%= form_with model: @item do |f| %>
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_field :description, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :images %>
+          <%= f.file_field :images, multiple: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :category, 'カテゴリ' %>
+          <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |c| %>
+          <%= c.label do %>
+          <%= c.check_box %>
+          <%= c.text %>
+          <% end %>
+          <% end %>
+        </div>
+
+        <%= f.submit "新規投稿", class: 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

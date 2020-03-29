@@ -2,7 +2,8 @@
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
     <h1 class="text-white">北海道穴場観光マップ</h1>
-    <h2 class="text-white">穴場観光地を一緒に見つけませんか？</h2>
+    <h2 class="text-white2">穴場観光地を一緒に見つけませんか？</h2>
+    <% unless user_signed_in? %>
     <div class="row">
       <div class="col-md-3 offset-md-3">
         <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-block btn-white' %>
@@ -11,5 +12,8 @@
         <%= link_to 'ログイン', new_user_session_path,class: 'btn btn-block btn-white' %>
       </div>
     </div>
+    <% end %>
   </div>
 </div>
+
+<%= render 'staticpages/card' %>
