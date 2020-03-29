@@ -1,14 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-
-  before do
-    FactoryBot.create(:item)
-  end
+ let(:item) { create(:item, user: user) }
+ let(:user) { create(:user) }
 
   describe "バリデーション " do
     it 'user_idとdescriptionがあればOK' do
-      
+      binding.pry
     end
 
     it 'user_idが空ならNG' do
@@ -23,28 +21,28 @@ RSpec.describe Item, type: :model do
 
   describe "関連付け" do
     describe "has_many" do
-    it "coments" do
+      it "coments" do
 
+      end
+
+      it "likes" do
+
+      end
+
+      it "like_users" do
+      end
+
+      it "images" do
+
+      end
     end
 
-    it "likes" do
+    describe "belongs_to" do
+      it "user" do
+
+      end
 
     end
-
-    it "like_users" do
-    end
-
-    it "images" do
-
-    end
-  end
-
-  describe "belongs_to" do
-    it "user" do
-
-    end
-
-  end
 
   end
 
