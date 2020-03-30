@@ -30,6 +30,18 @@ test:
   <<: *default
   database: hokkaido_app_test
 
+production:
+  adapter: pg
+  database: dimujs1i59p99
+  username: hokkaido_app
+  port: 5432
+  host: ec2-184-72-236-3.compute-1.amazonaws.com
+  charset: utf8
+  collation: utf8
+  encoding: utf8
+  url: <%= ENV['DATABASE_URL'] %>
+  password: 0d22a0474489c874729225e0f6f5f9abfbccc46feea631dbaba2f1bffab61099
+
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -49,8 +61,3 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: hokkaido_app_production
-  username: hokkaido_app
-  password: <%= ENV['HOKKAIDO_APP_DATABASE_PASSWORD'] %>
