@@ -6,22 +6,19 @@ RSpec.describe Item, type: :model do
 
   describe "バリデーション " do
     it 'user_idとdescriptionがあればOK' do
-      
-    end
-
-    it 'user_idが空ならNG' do
-
+      expect(item.valid?).to eq(true)
     end
 
     it 'descriptionが空ならNG' do
-
+      item.description = ''
+      expect(item.valid?).to eq(false)
     end
 
   end
 
   describe "関連付け" do
     describe "has_many" do
-      it "coments" do
+      it "comments" do
 
       end
 
@@ -35,10 +32,15 @@ RSpec.describe Item, type: :model do
       it "images" do
 
       end
+
+      it "categories" do
+        
+      end
     end
 
     describe "belongs_to" do
       it "user" do
+       expect(item).to belong_to(:user).optional(:true)
 
       end
 
