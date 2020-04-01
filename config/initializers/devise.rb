@@ -303,8 +303,8 @@ Devise.setup do |config|
   Settings.facebook.facebook_api_secret,
   scope: 'email',
   info_fields: 'email,name'
-  
+
   config.omniauth :twitter,
-  Settings.twitter[:twitter_api_key],
-  Settings.twitter[:twitter_api_secret]
+  Settings.twitter.twitter_api_key,
+  Settings.twitter.twitter_api_secret
 end

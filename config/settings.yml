@@ -1,6 +1,13 @@
 web:
-  host: 'stormy-tundra-36016.herokuapp.com' #サイトのドメイン名
+  host: 'ec2-184-72-236-3.compute-1.amazonaws.com' #サイトのドメイン名
   protocol: 'https' #httpの場合はhttp
+
+smtp:
+  address: 'smtp.example.com' #SMTPサーバーのホスト名
+  port: 5432 #SMTPサーバーのポート番号
+  domain: 'example.com' #メールアドレスのドメイン名
+  user_name: 'admin@example.com' #メールアドレス
+  password: 'a123456' #パスワード
 
 facebook:
   facebook_api_key: '1092491441103629'
