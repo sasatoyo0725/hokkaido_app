@@ -1,3 +1,11 @@
+web:
+  host: 'example.com'#サイトのドメイン名
+  protocol: 'https'#httpの場合はhttp
+  
 facebook:
   facebook_api_key: '1092491441103629'
   facebook_api_secret: '0b9ce2710dd83d51eebf9ae325b1a55a'
+
+twitter:
+  twitter_api_key: 'bJRcTPomknEWKL4h8uMYTIOoL'
+  twitter_api_secret: 'SJxZ0GmHjAABWO75nSEXmwf4ylPYQMGPcR0AswBsZPkXKJ6amj'
