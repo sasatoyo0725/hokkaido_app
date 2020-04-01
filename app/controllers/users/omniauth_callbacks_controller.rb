@@ -47,7 +47,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
             uid: data['uid']
         }
       end
-      redirect_to new_user_registration_url
+      redirect_to new_user_registration_path
     end
   end
 
