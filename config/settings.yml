@@ -1,16 +1,6 @@
 web:
-  host: 'example.com' #サイトのドメイン名
+  host: 'stormy-tundra-36016.herokuapp.com' #サイトのドメイン名
   protocol: 'https' #httpの場合はhttp
-
-mail:
-  bcc: 'admin@example.com' ##受信できるメールアドレス
-
-smtp:
-  address: 'smtp.example.com' #SMTPサーバーのホスト名
-  port: 587 #SMTPサーバーのポート番号
-  domain: 'example.com' #メールアドレスのドメイン名
-  user_name: 'admin@example.com' #メールアドレス
-  password: 'a123456' #パスワード
 
 facebook:
   facebook_api_key: '1092491441103629'
