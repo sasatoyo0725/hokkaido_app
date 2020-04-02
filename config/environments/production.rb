@@ -1,6 +1,7 @@
 Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { :host => 'stormy-tundra-36016.herokuapp.com/' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
