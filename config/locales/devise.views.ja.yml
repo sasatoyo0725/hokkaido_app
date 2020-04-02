@@ -32,6 +32,7 @@ ja:
     mailer:
       confirmation_instructions:
         action: "アカウント確認"
+        subject: 'アカウントの有効化について'
         greeting: "ようこそ、%{recipient}さん!"
         instruction: "次のリンクでメールアドレスの確認が完了します。"
       reset_password_instructions:
