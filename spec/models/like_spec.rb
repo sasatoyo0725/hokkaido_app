@@ -11,6 +11,10 @@ RSpec.describe Like, type: :model do
         expect(like).to belong_to(:user)
       end
 
+      it "item" do
+        expect(like).to belong_to(:item)
+      end
+
     end
 
   end

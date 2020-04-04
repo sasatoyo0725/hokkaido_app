@@ -16,17 +16,18 @@ RSpec.describe Item, type: :model do
 
   end
 
-  describe "関連付け" do
+  describe "アソシエーション" do
     describe "has_many" do
       it "comments" do
-
+        expect(item).to have_many(:comments).dependent(:destroy)
       end
 
       it "likes" do
-
+        expect(item).to have_many(:likes).dependent(:destroy)
       end
 
-      it "like_users" do
+      it "like_users"
+        #expect(item).to have_many(:like_users).through(:likes).source(:user)
       end
 
       it "images" do
@@ -34,7 +35,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "categories" do
-        
+
       end
     end
 
@@ -47,5 +48,3 @@ RSpec.describe Item, type: :model do
     end
 
   end
-
-end
