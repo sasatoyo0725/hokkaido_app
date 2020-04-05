@@ -12,23 +12,24 @@ RSpec.describe Comment, type: :model do
       end
     end
 
-    context "contentが存在しない場合"
-    it "commnet登録できない"do
-    expect(comment.invalid?).to eq(false)
-  end
-end
-
-describe "アソシエーション" do
-  describe "belongs_to" do
-    it "user" do
-      expect(comment).to belong_to(:user).optional(:true)
+    context "commentが存在しない場合" do
+      it "comment登録できない" do
+        expect(comment.invalid?).to eq(false)
+      end
     end
-
-    it "item" do
-      expect(comment).to belong_to(:item).optional(:true)
-    end
-
   end
 
-end
+  describe "アソシエーション" do
+    describe "belongs_to" do
+      it "user" do
+        expect(comment).to belong_to(:user).optional(:true)
+      end
+
+      it "item" do
+        expect(comment).to belong_to(:item).optional(:true)
+      end
+
+    end
+
+  end
 end

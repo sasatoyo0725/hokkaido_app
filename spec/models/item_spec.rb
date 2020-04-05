@@ -16,7 +16,8 @@ RSpec.describe Item, type: :model do
 
   end
 
-  describe "アソシエーション" do
+
+  describe "関連づけ" do
     describe "has_many" do
       it "comments" do
         expect(item).to have_many(:comments).dependent(:destroy)
@@ -34,8 +35,12 @@ RSpec.describe Item, type: :model do
 
       end
 
-      it "categories" do
+      it "item_category" do
+        expect(item).to have_many(:item_category)
+      end
 
+      it "categorires" do
+        expect(item).to have_many(:categories).through(:item_category)
       end
     end
 

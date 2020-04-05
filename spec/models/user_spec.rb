@@ -78,40 +78,40 @@ RSpec.describe User, type: :model do
 
   describe "関連づけ" do
     describe "has_many" do
-    it "items" do
-      expect(user).to have_many(:items).dependent(:destroy)
+      it "items" do
+        expect(user).to have_many(:items).dependent(:destroy)
+      end
+
+      it "comments" do
+        expect(user).to have_many(:comments).dependent(:destroy)
+      end
+
+      it "likes" do
+        expect(user).to have_many(:likes).dependent(:destroy)
+      end
+
+      it "like_items" do
+        expect(user).to have_many(:like_items).through(:likes).source(:item)
+      end
+
+      #it "followings" do
+      #  expect(user).to have_many(:followings).through(:following_relationships).dependent(:destroy)
+      #end
+
+      #it "followers" do
+      #  expect(user).to have_many(:followers).through(:follower_relationships).dependent(:destroy)
+      #end
+
+      it "following_relationships" do
+
+      end
+
+      it "follower_relationships" do
+
+      end
+
+
     end
-
-    it "comments" do
-      expect(user).to have_many(:comments).dependent(:destroy)
-    end
-
-    it "likes" do
-      expect(user).to have_many(:likes).dependent(:destroy)
-    end
-
-    it "like_items" do
-      expect(user).to have_many(:like_items).through(:likes).source(:item)
-    end
-
-    #it "followings" do
-    #  expect(user).to have_many(:followings).through(:following_relationships).dependent(:destroy)
-    #end
-
-    #it "followers" do
-    #  expect(user).to have_many(:followers).through(:follower_relationships).dependent(:destroy)
-    #end
-
-    it "following_relationships" do
-
-    end
-
-    it "follower_relationships" do
-
-    end
-
-
-  end
 
   end
 
