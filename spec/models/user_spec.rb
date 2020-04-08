@@ -79,6 +79,7 @@ RSpec.describe User, type: :model do
   describe "関連づけ" do
     describe "has_many" do
       it "items" do
+        binding.pry
         expect(user).to have_many(:items).dependent(:destroy)
       end
 
