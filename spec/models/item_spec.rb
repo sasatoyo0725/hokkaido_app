@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
- let(:item) { create(:item, user: user) }
- let(:user) { create(:user) }
+  let(:item) { create(:item, user: user) }
+  let(:user) { create(:user) }
 
   describe "バリデーション " do
     it 'user_idとdescriptionがあればOK' do
@@ -27,10 +27,6 @@ RSpec.describe Item, type: :model do
         expect(item).to have_many(:likes).dependent(:destroy)
       end
 
-      it "like_users"
-        #expect(item).to have_many(:like_users).through(:likes).source(:user)
-      end
-
       it "images" do
 
       end
@@ -46,10 +42,11 @@ RSpec.describe Item, type: :model do
 
     describe "belongs_to" do
       it "user" do
-       expect(item).to belong_to(:user).optional(:true)
+        expect(item).to belong_to(:user).optional(:true)
 
       end
 
     end
-
   end
+
+end

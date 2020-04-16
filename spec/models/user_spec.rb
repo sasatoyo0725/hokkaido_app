@@ -79,7 +79,6 @@ RSpec.describe User, type: :model do
   describe "関連づけ" do
     describe "has_many" do
       it "items" do
-        binding.pry
         expect(user).to have_many(:items).dependent(:destroy)
       end
 
@@ -94,27 +93,14 @@ RSpec.describe User, type: :model do
       it "like_items" do
         expect(user).to have_many(:like_items).through(:likes).source(:item)
       end
-
-      #it "followings" do
-      #  expect(user).to have_many(:followings).through(:following_relationships).dependent(:destroy)
-      #end
-
-      #it "followers" do
-      #  expect(user).to have_many(:followers).through(:follower_relationships).dependent(:destroy)
-      #end
-
-      it "following_relationships" do
-
-      end
-
-      it "follower_relationships" do
-
-      end
-
-
     end
-
   end
 
+  describe "画像投稿" do
+    it "画像がアップロードできる" do
+      expect(user.image).to be_attached
 
+    end
+    
+  end
 end

@@ -22,7 +22,7 @@ module HokkaidoApp
       fixtures: false,
       view_specs: false,
       helper_specs: false,
-      controller_specs: false,
+      controller_specs: true,
       routing_specs: false
     end
   end
